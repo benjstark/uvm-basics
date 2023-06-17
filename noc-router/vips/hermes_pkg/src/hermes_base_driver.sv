@@ -4,7 +4,7 @@ class hermes_base_driver extends uvm_driver #(hermes_packet_t);
 
 uvm_analysis_port #(hermes_packet_t) aport; // used to send the incomming packet to the sb 
 
-virtual hermes_if dut_vi;
+virtual hermes_if dut_vi;//虚拟接口可以在运行时动态地连接到不同的实例，从而实现测试环境中的灵活连接和重用。
 bit [3:0] port;
 
 function new(string name, uvm_component parent);
