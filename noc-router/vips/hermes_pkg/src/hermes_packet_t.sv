@@ -116,7 +116,7 @@ function new(string name = "");
   super.new(name);
   // when the transaction is input, them oport=-1
   // otherwise, when the transaction is output, them dport=-1
-  dport = -1;
+  dport = -1;//这个dport的作用是记录当前packet是从哪个port输入的，以便在记分板等组件中分析，例如，分析路由路径是否正确。
   oport = -1;
 
 endfunction: new
