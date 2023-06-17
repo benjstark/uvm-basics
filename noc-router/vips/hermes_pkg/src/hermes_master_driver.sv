@@ -80,7 +80,8 @@ task run_phase(uvm_phase phase);
 		@(posedge dut_vi.clock);	
 		dut_vi.avail = 1'b0;
 		dut_vi.data = 0;
-
+		//从这里可以看到，port值传到了packet的dport里，之后将packet放到分析端口到达计分板。因此port值必须从env->agent->driver一路传下来，将正确的端口值传到packet里，
+		//进行后续分析。所以port这个变量的作用就是记录端口值。
 		tx.dport = port; // set the output port for sb verification
 		aport.write(tx); // send it to the sb
 		seq_item_port.item_done();			
