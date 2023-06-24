@@ -33,7 +33,7 @@ endfunction
 // create the env and cfgs
 function void build_phase(uvm_phase phase);
   super.build_phase(phase);
-  env_cfg = hermes_router_env_config::type_id::create("env_cfg",this);
+	env_cfg = hermes_router_env_config::type_id::create("env_cfg",this);//object 需要加this吗？
   foreach(acfg[i]) begin
     acfg[i] =  hermes_agent_config::type_id::create($sformatf("acfg[%0d]",i),this);
     // hook the env's config with the agent's config
