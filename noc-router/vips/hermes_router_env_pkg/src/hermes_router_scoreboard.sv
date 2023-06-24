@@ -52,7 +52,7 @@ endtask: run_phase
 task get_input_data(uvm_tlm_analysis_fifo #(hermes_packet_t) fifo, uvm_phase phase);
   hermes_packet_t tx;
   forever begin
-    fifo.get(tx);
+    fifo.get(tx);//blocking method
     // use objections terminate the simulation after all the packets were received 
     phase.raise_objection(this);
     input_packet_queue.push_back(tx);
@@ -68,7 +68,7 @@ task get_output_data(uvm_tlm_analysis_fifo #(hermes_packet_t) fifo, uvm_phase ph
   bit found;
   forever begin
     tx = hermes_packet_t::type_id::create("tx");
-    fifo.get(tx);
+    fifo.get(tx);//blocking method
     
     packets_received++;
     `uvm_info("SCOREBOARD", "OUTPUT PACKET RECEIVED !!!!", UVM_HIGH);
