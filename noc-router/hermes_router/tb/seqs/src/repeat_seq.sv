@@ -15,7 +15,7 @@ endfunction: new
 task pre_body();
   super.pre_body();
   // the configuration and the sequencer must be set in the tests
-  if(!uvm_config_db #(hermes_router_seq_config)::get(get_sequencer(), "", "config", cfg))
+ if(!uvm_config_db #(hermes_router_seq_config)::get(get_sequencer(), "", "config", cfg))//这里能get到吗？repeat_test里是在body里set的。
     `uvm_fatal(get_type_name(), "config config_db lookup failed")
 endtask
 
