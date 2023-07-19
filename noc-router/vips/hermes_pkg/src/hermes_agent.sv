@@ -34,7 +34,7 @@ function void build_phase(uvm_phase phase);
     `uvm_fatal("agent", "unexpected mode value");    
 
   // port id
-  if (!uvm_config_db #(bit [3:0])::get (this,"", "port", port) )
+ if (!uvm_config_db #(bit [3:0])::get (this,"", "port", port) ) //这个port从哪get来的？
     `uvm_fatal("agent", "No port"); 
   `uvm_info("agent", $sformatf("PORT number: %0d",port), UVM_HIGH)
   // set the correct interface to its monitor and agent. 
