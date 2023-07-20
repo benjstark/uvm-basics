@@ -81,6 +81,7 @@ task get_output_data(uvm_tlm_analysis_fifo #(hermes_packet_t) fifo, uvm_phase ph
       //$display("%s",input_packet_queue[i].convert2string());
       if (input_packet_queue[i].compare(tx)) begin
         if (check_xy_routing (tx.x, tx.y, input_packet_queue[i].dport, tx.oport)) begin
+          //这里input_packet_queue[i].dport应该改成oport，因为monitor那里assign 到了oport
           `uvm_info("SB_MATCH", $sformatf("packet received successfully !!!!\n%s",tx.convert2string()), UVM_HIGH);
           packet_matches++;
           found = 1;
