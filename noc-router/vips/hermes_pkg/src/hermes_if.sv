@@ -15,7 +15,7 @@ Each of the five interfaces has the following ports:
                            _____________
 */
 
-    logic        clk, avail,  credit;
+    logic        clk, avail,  credit;//从这里看不出clock和clk的关系，在wrapper里能理清楚
     logic [15:0]  data;
 
     modport datain (
