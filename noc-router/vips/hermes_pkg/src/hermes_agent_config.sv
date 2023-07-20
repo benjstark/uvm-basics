@@ -2,7 +2,7 @@
 class hermes_agent_config extends uvm_object;
 `uvm_object_utils(hermes_agent_config)
 
-uvm_active_passive_enum is_active = UVM_ACTIVE;
+uvm_active_passive_enum is_active = UVM_ACTIVE;//这是agent configuration 自己的成员变量
 bit master_driver_enabled = 1;
 
 
