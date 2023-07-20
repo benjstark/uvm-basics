@@ -15,7 +15,7 @@ logic [15:0] data_out[4:0];
 generate
 	for (genvar i = 0; i < 5; i++) begin
 		// input port
-		assign clock_rx[i]    = clock;
+		assign clock_rx[i]    = clock;//这里可以看到，router的input clk连到了外部clock。
 		assign rx[i]          = din[i].avail;
 		assign din[i].credit  = credit_o[i];
 		assign data_in[i]     = din[i].data;
