@@ -84,6 +84,7 @@ task run_phase(uvm_phase phase);
 		//进行后续分析。所以port这个变量的作用就是记录端口值。
 		tx.dport = port; // set the output port for sb verification
 		aport.write(tx); // send it to the sb
+		//这个aport没有用好像，没和scoreboard连
 		seq_item_port.item_done();			
 	end
 endtask: run_phase
