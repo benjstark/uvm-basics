@@ -68,7 +68,7 @@ package HeMPS_defaults is
         constant NUMBER_PROCESSORS : integer := 9;
         constant NUMBER_PROCESSORS_X : integer := 3;
         constant NUMBER_PROCESSORS_Y : integer := 3;
-        constant NROT: integer := NUMBER_PROCESSORS;
+        constant NROT: integer := NUMBER_PROCESSORS;--没用
 
         constant MIN_X : integer := 0;
         constant MIN_Y : integer := 0;
