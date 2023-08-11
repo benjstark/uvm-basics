@@ -88,7 +88,7 @@ package HeMPS_defaults is
         subtype reg8 is std_logic_vector(7 downto 0);
         subtype reg30 is std_logic_vector(29 downto 0); 
         subtype reg32 is std_logic_vector(31 downto 0); 
-        subtype regNrot is std_logic_vector((NROT-1) downto 0);
+        subtype regNrot is std_logic_vector((NROT-1) downto 0);--没用到貌似
         subtype regNport is std_logic_vector((NPORT-1) downto 0); 
         subtype regflit is std_logic_vector((TAM_FLIT-1) downto 0); 
         subtype regmetadeflit is std_logic_vector((METADEFLIT-1) downto 0); 
@@ -103,9 +103,9 @@ package HeMPS_defaults is
         type arrayNport_reg3 is array((NPORT-1) downto 0) of reg3;
         type arrayNport_reg8 is array((NPORT-1) downto 0) of reg8;
         type arrayNport_regflit is array((NPORT-1) downto 0) of regflit; 
-        type arrayNrot_reg3 is array((NROT-1) downto 0) of reg3;
-        type arrayNrot_regflit is array((NROT-1) downto 0) of regflit;
-        type arrayNrot_regmetadeflit is array((NROT-1) downto 0) of regmetadeflit; 
+        type arrayNrot_reg3 is array((NROT-1) downto 0) of reg3;--没用到
+        type arrayNrot_regflit is array((NROT-1) downto 0) of regflit;--没用到
+        type arrayNrot_regmetadeflit is array((NROT-1) downto 0) of regmetadeflit; --没用到
         type arrayNPe_reg32 is array((NUMBER_PROCESSORS -1) downto 0) of reg32;
         type arrayNPe_reg30 is array((NUMBER_PROCESSORS -1) downto 0) of reg30;
 
