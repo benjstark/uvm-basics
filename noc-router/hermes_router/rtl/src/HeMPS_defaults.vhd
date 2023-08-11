@@ -78,7 +78,7 @@ package HeMPS_defaults is
 ---------------------------------------------------------
 -- CONSTANT TB
 ---------------------------------------------------------
-        constant TAM_LINHA : integer := 2; --4;
+        constant TAM_LINHA : integer := 2; --4;--用来构成一些function的，貌似没用
 
 ---------------------------------------------------------
 -- SUBTIPOS, TIPOS E FUNCOES
