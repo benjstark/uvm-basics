@@ -59,7 +59,7 @@ package HeMPS_defaults is
 -- CONSTANTS DEPENDENTES DA PROFUNDIDADE DA FILA
 ---------------------------------------------------------
         constant TAM_BUFFER: integer := 16;
-        constant TAM_BUFFER_DMNI: integer := 16;
+        constant TAM_BUFFER_DMNI: integer := 16;--没用到貌似
         constant TAM_POINTER : integer range 1 to 32 := 4;
 
 ---------------------------------------------------------
@@ -97,7 +97,7 @@ package HeMPS_defaults is
         subtype regNPe is std_logic_vector((NUMBER_PROCESSORS - 1) downto 0);
 
         type buff is array(0 to TAM_BUFFER-1) of regflit;
-        type buff_dmni is array(0 to TAM_BUFFER_DMNI-1) of regflit;
+        type buff_dmni is array(0 to TAM_BUFFER_DMNI-1) of regflit;--没用到貌似
 
 
         type arrayNport_reg3 is array((NPORT-1) downto 0) of reg3;
